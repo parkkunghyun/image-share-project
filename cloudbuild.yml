@@ -1,6 +1,6 @@
 substitutions:
-  _NEXT_PUBLIC_SUPABASE_URL: "${NEXT_PUBLIC_SUPABASE_URL}"
-  _NEXT_PUBLIC_SUPABASE_ANON_KEY: "${NEXT_PUBLIC_SUPABASE_ANON_KEY}"
+  _NEXT_PUBLIC_SUPABASE_URL: "${_NEXT_PUBLIC_SUPABASE_URL}"
+  _NEXT_PUBLIC_SUPABASE_ANON_KEY: "${_NEXT_PUBLIC_SUPABASE_ANON_KEY}"
 
 steps:
   - name: 'gcr.io/cloud-builders/docker'
@@ -9,7 +9,7 @@ steps:
       - '--platform'
       - 'linux/amd64'
       - '-t'
-      - 'us-central1-docker.pkg.dev/python-gcp-422006/supabase-projects/imageShare-service:latest'
+      - 'us-central1-docker.pkg.dev/python-gcp-422006/supabase-images/image-share:latest'
       - '--build-arg'
       - 'NEXT_PUBLIC_SUPABASE_URL=$_NEXT_PUBLIC_SUPABASE_URL'
       - '--build-arg'
@@ -17,4 +17,4 @@ steps:
       - '.'
 
 images:
-  - 'us-central1-docker.pkg.dev/python-gcp-422006/supabase-projects/imageShare-service:latest'
+  - 'us-central1-docker.pkg.dev/python-gcp-422006/supabase-images/image-share:latest'

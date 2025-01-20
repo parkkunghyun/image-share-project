@@ -29,7 +29,7 @@ jobs:
       - name: Deploy to Cloud Run
         run: |
           gcloud run deploy supabase-imageShare \
-            --image us-central1-docker.pkg.dev/python-gcp-422006/supabase-projects/imageShare-service:latest \
+            --image us-central1-docker.pkg.dev/python-gcp-422006/supabase-images/image-share:latest \
             --platform managed \
             --region us-central1 \
             --allow-unauthenticated
