@@ -28,7 +28,7 @@ jobs:
 
       - name: Deploy to Cloud Run
         run: |
-          gcloud run deploy supabase-todo \
+          gcloud run deploy supabase-imageShare \
             --image us-central1-docker.pkg.dev/python-gcp-422006/supabase-projects/imageShare-service:latest \
             --platform managed \
             --region us-central1 \
